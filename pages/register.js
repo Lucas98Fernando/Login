@@ -16,12 +16,12 @@ export default function Register({navigation}) {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <KeyboardAvoidingView style={styles.container}>
         <ImageBackground
-          source={require('../assets/bg_music1.jpg')}
+          source={require('../assets/img/bg_music1.jpg')}
           style={styles.bgImage}>
           <View style={styles.containerLogo}>
             <Text style={styles.titleLogin}>Cadastro</Text>
             <Text style={styles.textAboveTitle}>Preencha os campos abaixo para criar sua conta</Text>
-            <Image style={styles.imgLogo} source={require('../assets/agreement.png')} />
+            <Image style={styles.imgLogo} source={require('../assets/img/agreement.png')} />
           </View>
 
           <View style={styles.containerInput}>
@@ -56,8 +56,6 @@ export default function Register({navigation}) {
               onChangeText={() => {}}
             />
 
-            <Text style={styles.textTerms}>Li e concordo com os termos de uso.</Text>
-
             <TouchableOpacity style={styles.btnSubmit}>
               <Text style={styles.btnText}>Criar conta</Text>
             </TouchableOpacity>
@@ -91,7 +89,7 @@ const styles = StyleSheet.create({
   },
   inputFields: {
     borderColor: '#fff',
-    borderRadius: 20,
+    borderRadius: 15,
     borderWidth: 1,
     padding: 15,
     marginBottom: 15,
@@ -103,9 +101,9 @@ const styles = StyleSheet.create({
   },
   btnSubmit: {
     width: '90%',
-    marginBottom: 5,
+    marginBottom: 25,
     borderWidth: 1,
-    borderRadius: 20,
+    borderRadius: 15,
     height: 50,
     padding: 15,
     backgroundColor: '#FF8C00',

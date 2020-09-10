@@ -17,11 +17,11 @@ export default function App({navigation}) {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <KeyboardAvoidingView style={styles.container}>
         <ImageBackground
-          source={require('../assets/bg_music.jpg')}
+          source={require('../assets/img/bg_music.jpg')}
           style={styles.bgImage}>
           <View style={styles.containerLogo}>
             <Text style={styles.titleLogin}>Login</Text>
-            <Image style={styles.imgLogo} source={require('../assets/agreement.png')} />
+            <Image style={styles.imgLogo} source={require('../assets/img/agreement.png')} />
           </View>
 
           <View style={styles.containerInput}>
@@ -44,19 +44,23 @@ export default function App({navigation}) {
               <Text style={styles.btnText}>Entrar</Text>
             </TouchableOpacity>
 
+            <TouchableOpacity onPress={() => navigation.navigate('RecoverPassword')}>
+              <Text style={styles.forgotPassword}>Esqueceu sua senha ?</Text>
+            </TouchableOpacity>
+
             <Text style={styles.register}> Entrar com:</Text>
             <View style={styles.containerIcons}>
               <Image
                 style={styles.iconsRegister}
-                source={require('../assets/facebook.png')}
+                source={require('../assets/img/facebook.png')}
               />
               <Image
                 style={styles.iconsRegister}
-                source={require('../assets/ui.png')}
+                source={require('../assets/img/ui.png')}
               />
               <Image
                 style={styles.iconsRegister}
-                source={require('../assets/twitter.png')}
+                source={require('../assets/img/twitter.png')}
               />
             </View>
 
@@ -82,13 +86,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   containerInput: {
-    flex: 1,
+    flex: 1.2,
     alignItems: 'center',
     width: '95%',
   },
   inputFields: {
     borderColor: '#fff',
-    borderRadius: 20,
+    borderRadius: 15,
     borderWidth: 1,
     padding: 15,
     marginBottom: 15,
@@ -102,7 +106,7 @@ const styles = StyleSheet.create({
     width: '90%',
     marginBottom: 15,
     borderWidth: 1,
-    borderRadius: 20,
+    borderRadius: 15,
     height: 50,
     padding: 15,
     backgroundColor: '#FF8C00',
@@ -146,7 +150,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
-    marginBottom: 5,
+    marginBottom: 10,
   },
   containerIcons: {
     flexDirection: 'row',
@@ -154,5 +158,9 @@ const styles = StyleSheet.create({
   },
   iconsRegister: {
     margin: 7,
+  },
+  forgotPassword: {
+    color:'#fff',
+    marginBottom: 15
   },
 });
