@@ -25,8 +25,8 @@ Summary
    * [Python](#others)
    * [Yarn](#others)
    * [Node.js](#others)
-   * [JDK 8](#)
-   * [Android Studio](#)
+   * [JDK 8](#android)
+   * [Android Studio](#android)
 <!--te-->
 
 <h3 id="chocolatey">Installing Chocolatey</h3>
