@@ -1,5 +1,6 @@
 import React from 'react';
-import {StyleSheet,
+import {
+  StyleSheet,
   View,
   Text,
   KeyboardAvoidingView,
@@ -19,50 +20,50 @@ export default function Register({navigation}) {
           source={require('../assets/img/bg_music1.jpg')}
           style={styles.bgImage}>
           <View style={styles.containerLogo}>
-            <Text style={styles.titleLogin}>Cadastro</Text>
-            <Text style={styles.textAboveTitle}>Preencha os campos abaixo para criar sua conta</Text>
+            <Text style={styles.titleRegister}>Cadastro</Text>
+            <Text style={styles.textBelowTitle}>Preencha os campos abaixo para criar sua conta</Text>
             <Image style={styles.imgLogo} source={require('../assets/img/agreement.png')} />
           </View>
 
           <View style={styles.containerInput}>
 
           <TextInput
-              style={styles.inputFields}
-              placeholder="Nome Completo"
-              autoCorrect={false}
-              onChangeText={() => {}}
-            />
+            style={styles.inputFields}
+            placeholder="Nome Completo"
+            autoCorrect={false}
+            onChangeText={() => {}}
+          />
 
-            <TextInput
-              style={styles.inputFields}
-              placeholder="E-mail"
-              autoCorrect={false}
-              onChangeText={() => {}}
-            />
+          <TextInput
+            style={styles.inputFields}
+            placeholder="E-mail"
+            autoCorrect={false}
+            onChangeText={() => {}}
+          />
 
-            <TextInput
-              style={styles.inputFields}
-              placeholder="Senha"
-              secureTextEntry={true}
-              autoCorrect={false}
-              onChangeText={() => {}}
-            />
+          <TextInput
+            style={styles.inputFields}
+            placeholder="Senha"
+            secureTextEntry={true}
+            autoCorrect={false}
+            onChangeText={() => {}}
+          />
 
-            <TextInput
-              style={styles.inputFields}
-              placeholder="Confirmar senha"
-              secureTextEntry={true}
-              autoCorrect={false}
-              onChangeText={() => {}}
-            />
+          <TextInput
+            style={styles.inputFields}
+            placeholder="Confirmar senha"
+            secureTextEntry={true}
+            autoCorrect={false}
+            onChangeText={() => {}}
+          />
 
-            <TouchableOpacity style={styles.btnSubmit}>
-              <Text style={styles.btnText}>Criar conta</Text>
-            </TouchableOpacity>
+          <TouchableOpacity style={styles.btnSubmit}>
+            <Text style={styles.btnText}>Criar conta</Text>
+          </TouchableOpacity>
 
-            <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Home')}>
-              <Text style={styles.btnRegisterText}>Voltar para o login</Text>
-            </TouchableOpacity>
+          <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Home')}>
+            <Text style={styles.btnRegisterText}>Voltar para o login</Text>
+          </TouchableOpacity>
 
           </View>
         </ImageBackground>
@@ -125,10 +126,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 15,
   },
-  textCreateAccount: {
-    color: '#fff',
-  },
-  titleLogin: {
+  titleRegister: {
     marginTop: 10,
     color: '#FF8C00',
     fontSize: 45,
@@ -161,7 +159,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     marginBottom: 15,
   },
-  textAboveTitle: {
+  textBelowTitle: {
     color: '#fff',
   },
 });

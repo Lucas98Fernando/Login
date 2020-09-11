@@ -64,9 +64,13 @@ export default function App({navigation}) {
               />
             </View>
 
-            <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Register')}>
-              <Text style={styles.btnRegisterText}>Criar conta gratuita</Text>
-            </TouchableOpacity>
+            <View style={styles.createAccount}>
+              <Text style={styles.btnRegister}>Ainda não possuí conta?</Text>
+              <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Register')}>
+                <Text style={styles.btnRegisterText}>Criar conta gratuita</Text>
+              </TouchableOpacity>
+            </View>
+
           </View>
         </ImageBackground>
       </KeyboardAvoidingView>
@@ -86,7 +90,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   containerInput: {
-    flex: 1.2,
+    flex: 1.3,
     alignItems: 'center',
     width: '95%',
   },
@@ -119,16 +123,14 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   btnRegister: {
-    padding: 10,
-    marginBottom: 10,
+    marginTop: 10,
+    marginRight: 5,
+    color: '#fff',
   },
   btnRegisterText: {
     fontSize: 14,
-    color: '#fff',
-    fontWeight: 'bold',
-  },
-  textCreateAccount: {
-    color: '#fff',
+    color: '#FF8C00',
+    fontWeight: '500',
   },
   titleLogin: {
     marginTop: 10,
@@ -162,5 +164,9 @@ const styles = StyleSheet.create({
   forgotPassword: {
     color:'#fff',
     marginBottom: 15
+  },
+  createAccount: {
+    flexDirection: 'row',
+    flex: 1,
   },
 });

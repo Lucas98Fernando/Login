@@ -1,41 +1,53 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, TouchableWithoutFeedback, ImageBackground, TextInput, Keyboard, KeyboardAvoidingView, StyleSheet, Image,} from 'react-native';
+import {
+  View, 
+  Text, 
+  TouchableOpacity, 
+  TouchableWithoutFeedback, 
+  ImageBackground, 
+  TextInput, 
+  Keyboard, 
+  KeyboardAvoidingView, 
+  StyleSheet, 
+  Image,
+} from 'react-native';
 
 export default function Password({navigation}) {
-    return (
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-            <KeyboardAvoidingView style={styles.container}>
-                <ImageBackground
-                source={require('../assets/img/bg_music2.jpg')}
-                style={styles.bgImage}>
+  return (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <KeyboardAvoidingView style={styles.container}>
+        <ImageBackground
+          source={require('../assets/img/bg_music2.jpg')}
+          style={styles.bgImage}>
 
-                <View style={styles.containerLogo}>
-                    <Text style={styles.titlePassword}>Recuperar conta</Text>
-                    <Text style={styles.textAboveTitle}>Preencha o campo abaixo para recuperar sua conta</Text>
-                    <Image style={styles.imgLogo} source={require('../assets/img/agreement.png')} />
-                </View>
+          <View style={styles.containerLogo}>
+            <Text style={styles.titlePassword}>Recuperar conta</Text>
+            <Text style={styles.textBelowTitle}>Preencha o campo abaixo para recuperar sua conta</Text>
+            <Image style={styles.imgLogo} source={require('../assets/img/agreement.png')} />
+          </View>
 
-                <View style={styles.containerInput}>
+          <View style={styles.containerInput}>
 
-                    <TextInput
-                    style={styles.inputFields}
-                    placeholder="E-mail"
-                    autoCorrect={false}
-                    onChangeText={() => {}}
-                    />
+            <TextInput
+              style={styles.inputFields}
+              placeholder="E-mail"
+              autoCorrect={false}
+              onChangeText={() => {}}
+            />
 
-                    <TouchableOpacity style={styles.btnSubmit}>
-                    <Text style={styles.btnText}>Enviar e-mail de Recuperação</Text>
-                    </TouchableOpacity>
+            <TouchableOpacity style={styles.btnSubmit}>
+              <Text style={styles.btnText}>Enviar e-mail de recuperação</Text>
+            </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Home')}>
-                    <Text style={styles.btnRegisterText}>Voltar para o login</Text>
-                    </TouchableOpacity>
+            <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Home')}>
+              <Text style={styles.btnRegisterText}>Voltar para o login</Text>
+            </TouchableOpacity>
 
-                </View>
-                </ImageBackground>
-            </KeyboardAvoidingView>
-        </TouchableWithoutFeedback>
+          </View>
+
+        </ImageBackground>
+      </KeyboardAvoidingView>
+    </TouchableWithoutFeedback>
   );
 }
 
@@ -46,7 +58,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   containerLogo: {
-    flex: 1,
+    flex: 1.2,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -93,15 +105,11 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 15,
   },
-  textCreateAccount: {
-    color: '#fff',
-  },
   titlePassword: {
-    marginTop: 10,
+    margin: 10,
     color: '#FF8C00',
     fontSize: 45,
-    justifyContent: 'center',
-    alignItems: 'center',
+    textAlign: 'center',
     fontWeight: '700',
   },
   bgImage: {
@@ -112,24 +120,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     opacity: 0.95,
   },
-  register: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold',
-    marginBottom: 5,
-  },
-  containerIcons: {
-    flexDirection: 'row',
-    flex: 1,
-  },
-  iconsRegister: {
-    margin: 7,
-  },
-  textTerms: {
-    color: '#fff',
-    marginBottom: 15,
-  },
-  textAboveTitle: {
+  textBelowTitle: {
     color: '#fff',
   },
 });   
