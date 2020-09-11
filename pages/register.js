@@ -23,50 +23,46 @@ export default function Register({navigation}) {
           <View style={styles.containerLogo}>
             <Text style={styles.titleRegister}>Cadastro</Text>
             <Text style={styles.textBelowTitle}>Preencha os campos abaixo para criar sua conta</Text>
-            <Image style={styles.imgLogo} source={require('../assets/img/agreement.png')} />
+            <Image style={styles.imgLogo} source={require('../assets/img/register.png')} />
           </View>
 
           <View style={styles.containerInput}>
+            <TextInput
+              style={styles.inputFields}
+              placeholder="Nome Completo"
+              autoCorrect={false}
+              onChangeText={() => {}}
+            />
+            <TextInput
+              style={styles.inputFields}
+              placeholder="E-mail"
+              autoCorrect={false}
+              onChangeText={() => {}}
+            />
+            <TextInput
+              style={styles.inputFields}
+              placeholder="Senha"
+              secureTextEntry={true}
+              autoCorrect={false}
+              onChangeText={() => {}}
+            />
+            <TextInput
+              style={styles.inputFields}
+              placeholder="Confirmar senha"
+              secureTextEntry={true}
+              autoCorrect={false}
+              onChangeText={() => {}}
+            />
 
-          <TextInput
-            style={styles.inputFields}
-            placeholder="Nome Completo"
-            autoCorrect={false}
-            onChangeText={() => {}}
-          />
+            <TouchableOpacity style={styles.btnSubmit}>
+              <Text style={styles.btnText}>Criar conta</Text>
+            </TouchableOpacity>
 
-          <TextInput
-            style={styles.inputFields}
-            placeholder="E-mail"
-            autoCorrect={false}
-            onChangeText={() => {}}
-          />
-
-          <TextInput
-            style={styles.inputFields}
-            placeholder="Senha"
-            secureTextEntry={true}
-            autoCorrect={false}
-            onChangeText={() => {}}
-          />
-
-          <TextInput
-            style={styles.inputFields}
-            placeholder="Confirmar senha"
-            secureTextEntry={true}
-            autoCorrect={false}
-            onChangeText={() => {}}
-          />
-
-          <TouchableOpacity style={styles.btnSubmit}>
-            <Text style={styles.btnText}>Criar conta</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Login')}>
-            <Text style={styles.btnRegisterText}>Voltar para o login</Text>
-          </TouchableOpacity>
-
+            <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Login')}>
+              <Text style={styles.btnRegisterText}>Voltar para o login</Text>
+            </TouchableOpacity>
           </View>
+
         </ImageBackground>
       </KeyboardAvoidingView>
     </TouchableWithoutFeedback>
@@ -162,5 +158,6 @@ const styles = StyleSheet.create({
   },
   textBelowTitle: {
     color: '#fff',
+    marginBottom: 15,
   },
 });

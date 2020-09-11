@@ -22,7 +22,7 @@ export default function App({navigation}) {
             
           <View style={styles.containerLogo}>
             <Text style={styles.titleLogin}>Login</Text>
-            <Image style={styles.imgLogo} source={require('../assets/img/agreement.png')} />
+            <Image style={styles.imgLogo} source={require('../assets/img/password.png')} />
           </View>
 
           <View style={styles.containerInput}>
@@ -32,7 +32,6 @@ export default function App({navigation}) {
               autoCorrect={false}
               onChangeText={() => {}}
             />
-
             <TextInput
               style={styles.inputFields}
               placeholder="Senha"
@@ -45,11 +44,15 @@ export default function App({navigation}) {
               <Text style={styles.btnText}>Entrar</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => navigation.navigate('RecoverPassword')}>
-              <Text style={styles.forgotPassword}>Esqueceu sua senha ?</Text>
-            </TouchableOpacity>
-
+            <View style={styles.recoverPassword}>
+              <Text style={styles.btnRecover}>Esqueceu sua senha?</Text>
+              <TouchableOpacity style={styles.btnRecover} onPress={() => navigation.navigate('RecoverPassword')}>
+                <Text style={styles.textForgotPassword}>Recuperar</Text>
+              </TouchableOpacity>
+            </View>
+            
             <Text style={styles.register}> Entrar com:</Text>
+
             <View style={styles.containerIcons}>
               <Image
                 style={styles.iconsRegister}
@@ -66,7 +69,7 @@ export default function App({navigation}) {
             </View>
 
             <View style={styles.createAccount}>
-              <Text style={styles.btnRegister}>Ainda não possuí conta?</Text>
+              <Text style={styles.btnRegister}>Ainda não possui conta?</Text>
               <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Register')}>
                 <Text style={styles.btnRegisterText}>Criar conta gratuita</Text>
               </TouchableOpacity>
@@ -162,12 +165,21 @@ const styles = StyleSheet.create({
   iconsRegister: {
     margin: 7,
   },
-  forgotPassword: {
-    color:'#fff',
-    marginBottom: 15
+  textForgotPassword: {
+    color:'#ff8c00',
+    fontSize: 14,
   },
   createAccount: {
     flexDirection: 'row',
     flex: 1,
+  },
+  recoverPassword: {
+    flexDirection: 'row',
+    flex: 1,
+  },
+  btnRecover: {
+    color: '#fff',
+    marginTop: 10,
+    marginRight: 5,
   },
 });

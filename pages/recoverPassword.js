@@ -23,11 +23,10 @@ export default function Password({navigation}) {
           <View style={styles.containerLogo}>
             <Text style={styles.titlePassword}>Recuperar conta</Text>
             <Text style={styles.textBelowTitle}>Preencha o campo abaixo para recuperar sua conta</Text>
-            <Image style={styles.imgLogo} source={require('../assets/img/agreement.png')} />
+            <Image style={styles.imgLogo} source={require('../assets/img/backup.png')} />
           </View>
 
           <View style={styles.containerInput}>
-
             <TextInput
               style={styles.inputFields}
               placeholder="E-mail"
@@ -42,7 +41,6 @@ export default function Password({navigation}) {
             <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Login')}>
               <Text style={styles.btnRegisterText}>Voltar para o login</Text>
             </TouchableOpacity>
-
           </View>
 
         </ImageBackground>
@@ -106,7 +104,6 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   titlePassword: {
-    margin: 10,
     color: '#FF8C00',
     fontSize: 45,
     textAlign: 'center',
@@ -122,5 +119,6 @@ const styles = StyleSheet.create({
   },
   textBelowTitle: {
     color: '#fff',
+    marginBottom: 15,
   },
 });   
