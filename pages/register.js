@@ -19,6 +19,7 @@ export default function Register({navigation}) {
         <ImageBackground
           source={require('../assets/img/bg_music1.jpg')}
           style={styles.bgImage}>
+            
           <View style={styles.containerLogo}>
             <Text style={styles.titleRegister}>Cadastro</Text>
             <Text style={styles.textBelowTitle}>Preencha os campos abaixo para criar sua conta</Text>
@@ -61,7 +62,7 @@ export default function Register({navigation}) {
             <Text style={styles.btnText}>Criar conta</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Home')}>
+          <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Login')}>
             <Text style={styles.btnRegisterText}>Voltar para o login</Text>
           </TouchableOpacity>
 

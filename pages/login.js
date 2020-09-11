@@ -19,6 +19,7 @@ export default function App({navigation}) {
         <ImageBackground
           source={require('../assets/img/bg_music.jpg')}
           style={styles.bgImage}>
+            
           <View style={styles.containerLogo}>
             <Text style={styles.titleLogin}>Login</Text>
             <Image style={styles.imgLogo} source={require('../assets/img/agreement.png')} />

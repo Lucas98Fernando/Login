@@ -39,7 +39,7 @@ export default function Password({navigation}) {
               <Text style={styles.btnText}>Enviar e-mail de recuperação</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Home')}>
+            <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Login')}>
               <Text style={styles.btnRegisterText}>Voltar para o login</Text>
             </TouchableOpacity>
 
