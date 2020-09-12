@@ -1,6 +1,12 @@
 <h1 align="center">Template Login - React Native</h1>
 <p align="center">Login screen with transition to registration screen, using React Native Stack Navigation. This project is an evolution of LoginTemplate.</p>
 
+<p align="center">
+  <img src="./assets/img/login-screen.png">
+  <img src="./assets/img/register-screen.png">
+  <img src="./assets/img/recover-screen.png">
+</p>
+
 Summary
 =================
 <!--ts-->
