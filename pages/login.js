@@ -22,7 +22,7 @@ export default function App({navigation}) {
             
           <View style={styles.containerLogo}>
             <Text style={styles.titleLogin}>Login</Text>
-            <Image style={styles.imgLogo} source={require('../assets/img/password.png')} />
+            <Image style={styles.imgLogo} source={require('../assets/img/agreement.png')} />
           </View>
 
           <View style={styles.containerInput}>
@@ -43,13 +43,10 @@ export default function App({navigation}) {
             <TouchableOpacity style={styles.btnSubmit}>
               <Text style={styles.btnText}>Entrar</Text>
             </TouchableOpacity>
-
-            <View style={styles.recoverPassword}>
-              <Text style={styles.btnRecover}>Esqueceu sua senha?</Text>
+              
               <TouchableOpacity style={styles.btnRecover} onPress={() => navigation.navigate('RecoverPassword')}>
-                <Text style={styles.textForgotPassword}>Recuperar</Text>
+                <Text style={styles.textForgotPassword}>Esqueceu sua senha?</Text>
               </TouchableOpacity>
-            </View>
             
             <Text style={styles.register}> Entrar com:</Text>
 
@@ -99,9 +96,9 @@ const styles = StyleSheet.create({
     width: '95%',
   },
   inputFields: {
-    borderColor: '#fff',
+    borderColor: '#ff8c00',
     borderRadius: 15,
-    borderWidth: 1,
+    borderWidth: 2,
     padding: 15,
     marginBottom: 15,
     height: 50,
@@ -127,7 +124,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   btnRegister: {
-    marginTop: 10,
+    marginTop: 5,
     marginRight: 5,
     color: '#fff',
   },
@@ -142,7 +139,7 @@ const styles = StyleSheet.create({
     fontSize: 45,
     justifyContent: 'center',
     alignItems: 'center',
-    fontWeight: '700',
+    fontWeight: 'bold',
   },
   bgImage: {
     flex: 1,
@@ -163,7 +160,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   iconsRegister: {
-    margin: 7,
+    margin: 8,
   },
   textForgotPassword: {
     color:'#ff8c00',
@@ -173,13 +170,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flex: 1,
   },
-  recoverPassword: {
-    flexDirection: 'row',
-    flex: 1,
-  },
   btnRecover: {
-    color: '#fff',
-    marginTop: 10,
-    marginRight: 5,
+    marginBottom: 15,
   },
 });

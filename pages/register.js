@@ -15,18 +15,17 @@ import {
 export default function Register({navigation}) {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <KeyboardAvoidingView style={styles.container}>
+      <KeyboardAvoidingView style={styles.mainContainer}>
         <ImageBackground
-          source={require('../assets/img/bg_music1.jpg')}
+          source={require('../assets/img/bg_music4.jpg')}
           style={styles.bgImage}>
             
-          <View style={styles.containerLogo}>
+          <View style={styles.headerContainer}>
             <Text style={styles.titleRegister}>Cadastro</Text>
-            <Text style={styles.textBelowTitle}>Preencha os campos abaixo para criar sua conta</Text>
-            <Image style={styles.imgLogo} source={require('../assets/img/register.png')} />
+            <Text style={styles.textBelowTitle}>Preencha os campos abaixo para criar sua conta</Text>   
           </View>
 
-          <View style={styles.containerInput}>
+          <View style={styles.bodyContainer}>
             <TextInput
               style={styles.inputFields}
               placeholder="Nome Completo"
@@ -57,9 +56,11 @@ export default function Register({navigation}) {
             <TouchableOpacity style={styles.btnSubmit}>
               <Text style={styles.btnText}>Criar conta</Text>
             </TouchableOpacity>
+          </View>
 
-            <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Login')}>
-              <Text style={styles.btnRegisterText}>Voltar para o login</Text>
+          <View style={styles.footerContainer}>
+            <TouchableOpacity style={styles.btnBackLogin} onPress={() => navigation.navigate('Login')}>
+              <Text style={styles.textBackLogin}>Voltar para o login</Text>
             </TouchableOpacity>
           </View>
 
@@ -70,25 +71,39 @@ export default function Register({navigation}) {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  mainContainer: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  containerLogo: {
-    flex: 1,
+  headerContainer: {
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  containerInput: {
-    flex: 1.5,
+  bodyContainer: {
+    flex: 2,
     alignItems: 'center',
+    justifyContent: 'center',
     width: '95%',
   },
+  footerContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+  bgImage: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    opacity: 0.95,
+  },
   inputFields: {
-    borderColor: '#fff',
+    borderColor: '#ff8c00',
     borderRadius: 15,
-    borderWidth: 1,
+    borderWidth: 2,
     padding: 15,
     marginBottom: 15,
     height: 50,
@@ -113,31 +128,18 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: '700',
   },
-  btnRegister: {
-    padding: 10,
-    marginBottom: 10,
-  },
-  btnRegisterText: {
+  textBackLogin: {
     fontSize: 14,
-    color: '#fff',
+    color: '#ff8c00',
     fontWeight: 'bold',
-    marginBottom: 15,
+    marginBottom: 20,
   },
   titleRegister: {
-    marginTop: 10,
     color: '#FF8C00',
     fontSize: 45,
     justifyContent: 'center',
     alignItems: 'center',
     fontWeight: '700',
-  },
-  bgImage: {
-    flex: 1,
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    opacity: 0.95,
   },
   register: {
     color: '#fff',
@@ -158,6 +160,6 @@ const styles = StyleSheet.create({
   },
   textBelowTitle: {
     color: '#fff',
-    marginBottom: 15,
+    marginBottom: 50,
   },
 });
