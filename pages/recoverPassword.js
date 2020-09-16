@@ -21,10 +21,15 @@ export default function Password({navigation}) {
           style={styles.bgImage}>
 
           <View style={styles.headerContainer}>
-            <Text style={styles.titlePassword}>Recuperação</Text>
-            <Text style={styles.titlePassword}>de conta</Text>
-            <Text style={styles.textBelowTitle}>Preencha o campo abaixo para recuperar sua conta</Text>
-            
+            <Text 
+              style={styles.titlePassword}>Recuperação
+            </Text>
+            <Text 
+              style={styles.titlePassword}>de conta
+            </Text>
+            <Text 
+              style={styles.textBelowTitle}>Preencha o campo abaixo para recuperar sua conta
+            </Text>
           </View>
 
           <View style={styles.bodyContainer}>
@@ -34,14 +39,21 @@ export default function Password({navigation}) {
               autoCorrect={false}
               onChangeText={() => {}}
             />
-            <TouchableOpacity style={styles.btnSubmit}>
-              <Text style={styles.btnRecoverText}>Enviar e-mail de recuperação</Text>
+            <TouchableOpacity 
+              style={styles.btnSubmit}>
+              <Text 
+                style={styles.btnRecoverText}>Enviar e-mail de recuperação
+              </Text>
             </TouchableOpacity>
           </View>
 
           <View style={styles.footerContainer}>
-            <TouchableOpacity style={styles.btnBackLogin} onPress={() => navigation.navigate('Login')}>
-              <Text style={styles.textBackLogin}>Voltar para o login</Text>
+            <TouchableOpacity 
+              style={styles.btnBackLogin} 
+              onPress={() => navigation.navigate('Login')}>
+              <Text 
+                style={styles.textBackLogin}>Voltar para o login
+              </Text>
             </TouchableOpacity>
           </View>          
 
@@ -101,6 +113,7 @@ const styles = StyleSheet.create({
     color: '#000',
     width: '90%',
     backgroundColor: '#fff',
+    textAlign: 'center',
   },
   btnSubmit: {
     width: '90%',

@@ -21,8 +21,12 @@ export default function App({navigation}) {
           style={styles.bgImage}>
             
           <View style={styles.containerLogo}>
-            <Text style={styles.titleLogin}>Login</Text>
-            <Image style={styles.imgLogo} source={require('../assets/img/agreement.png')} />
+            <Text 
+              style={styles.titleLogin}>Login
+            </Text>
+            <Image 
+              style={styles.imgLogo} 
+              source={require('../assets/img/agreement.png')} />
           </View>
 
           <View style={styles.containerInput}>
@@ -40,15 +44,25 @@ export default function App({navigation}) {
               onChangeText={() => {}}
             />
 
-            <TouchableOpacity style={styles.btnSubmit}>
-              <Text style={styles.btnText}>Entrar</Text>
+            <TouchableOpacity 
+              style={styles.btnSubmit} 
+              onPress={() => navigation.navigate('Home')}>
+              <Text 
+                style={styles.btnText}>Entrar
+              </Text>
             </TouchableOpacity>
               
-              <TouchableOpacity style={styles.btnRecover} onPress={() => navigation.navigate('RecoverPassword')}>
-                <Text style={styles.textForgotPassword}>Esqueceu sua senha?</Text>
+              <TouchableOpacity 
+                style={styles.btnRecover} 
+                onPress={() => navigation.navigate('RecoverPassword')}>
+              <Text 
+                style={styles.textForgotPassword}>Esqueceu sua senha?
+              </Text>
               </TouchableOpacity>
             
-            <Text style={styles.register}> Entrar com:</Text>
+            <Text 
+              style={styles.register}> Entrar com:
+            </Text>
 
             <View style={styles.containerIcons}>
               <Image
@@ -66,9 +80,15 @@ export default function App({navigation}) {
             </View>
 
             <View style={styles.createAccount}>
-              <Text style={styles.btnRegister}>Ainda não possui conta?</Text>
-              <TouchableOpacity style={styles.btnRegister} onPress={() => navigation.navigate('Register')}>
-                <Text style={styles.btnRegisterText}>Criar conta gratuita</Text>
+              <Text 
+                style={styles.btnRegister}>Ainda não possui conta?
+              </Text>
+              <TouchableOpacity 
+                style={styles.btnRegister} 
+                onPress={() => navigation.navigate('Register')}>
+                <Text 
+                  style={styles.btnRegisterText}>Criar conta
+                </Text>
               </TouchableOpacity>
             </View>
 
@@ -106,6 +126,7 @@ const styles = StyleSheet.create({
     color: '#000',
     width: '90%',
     backgroundColor: '#fff',
+    textAlign: 'center',
   },
   btnSubmit: {
     width: '90%',
@@ -125,13 +146,13 @@ const styles = StyleSheet.create({
   },
   btnRegister: {
     marginTop: 5,
-    marginRight: 5,
     color: '#fff',
   },
   btnRegisterText: {
     fontSize: 14,
     color: '#FF8C00',
     fontWeight: '500',
+    alignSelf: 'center',
   },
   titleLogin: {
     marginTop: 10,
@@ -153,7 +174,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 5,
   },
   containerIcons: {
     flexDirection: 'row',
@@ -167,10 +188,12 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   createAccount: {
-    flexDirection: 'row',
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 15,
   },
   btnRecover: {
-    marginBottom: 15,
+    marginBottom: 10,
   },
 });

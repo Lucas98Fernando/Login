@@ -21,8 +21,12 @@ export default function Register({navigation}) {
           style={styles.bgImage}>
             
           <View style={styles.headerContainer}>
-            <Text style={styles.titleRegister}>Cadastro</Text>
-            <Text style={styles.textBelowTitle}>Preencha os campos abaixo para criar sua conta</Text>   
+            <Text 
+              style={styles.titleRegister}>Cadastro
+            </Text>
+            <Text 
+              style={styles.textBelowTitle}>Preencha os campos abaixo para criar sua conta
+            </Text>   
           </View>
 
           <View style={styles.bodyContainer}>
@@ -53,15 +57,22 @@ export default function Register({navigation}) {
               onChangeText={() => {}}
             />
 
-            <TouchableOpacity style={styles.btnSubmit}>
-              <Text style={styles.btnText}>Criar conta</Text>
+            <TouchableOpacity 
+              style={styles.btnSubmit}>
+              <Text 
+                style={styles.btnText}>Criar conta
+              </Text>
             </TouchableOpacity>
-          </View>
 
-          <View style={styles.footerContainer}>
-            <TouchableOpacity style={styles.btnBackLogin} onPress={() => navigation.navigate('Login')}>
-              <Text style={styles.textBackLogin}>Voltar para o login</Text>
-            </TouchableOpacity>
+            <View style={styles.footerContainer}>
+              <TouchableOpacity 
+                style={styles.btnBackLogin} 
+                onPress={() => navigation.navigate('Login')}>
+                <Text 
+                  style={styles.textBackLogin}>Voltar para o login
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
 
         </ImageBackground>
@@ -77,12 +88,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   headerContainer: {
-    flex: 2,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
   bodyContainer: {
-    flex: 2,
+    flex: 2.5,
     alignItems: 'center',
     justifyContent: 'center',
     width: '95%',
@@ -111,6 +122,7 @@ const styles = StyleSheet.create({
     color: '#000',
     width: '90%',
     backgroundColor: '#fff',
+    textAlign: 'center',
   },
   btnSubmit: {
     width: '90%',
