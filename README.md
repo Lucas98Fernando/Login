@@ -1,4 +1,4 @@
-<h1 align="center">Template Login - React Native</h1>
+<h1 align="center">UI template - React Native :iphone:</h1>
 <p align="center">Login screen with transition to registration screen, using React Native Stack Navigation. This project is an evolution of LoginTemplate.</p>
 
 <p align="center">
